@@ -1,0 +1,176 @@
+/* Base mobile styles */
+@media (max-width: 768px) {
+    /* Calendar adjustments */
+    .calendar-container {
+        margin: 0;
+        padding: 0.5rem;
+        border-radius: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .calendar-grid {
+        gap: 1px;
+        width: 100%;
+    }
+
+    .calendar-day {
+        min-height: 50px;
+        font-size: 0.875rem;
+        padding: 0.25rem;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 95% !important;
+        margin: 1rem auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-close-button {
+        position: fixed !important;
+        top: 0.5rem !important;
+        right: 0.5rem !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.5rem !important;
+        border-radius: 50% !important;
+        z-index: 100 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Grid layouts */
+    .feature-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Text adjustments */
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+
+    .text-xl {
+        font-size: 1.125rem !important;
+    }
+
+    /* Spacing adjustments */
+    .p-6 {
+        padding: 1rem !important;
+    }
+
+    .p-4 {
+        padding: 0.75rem !important;
+    }
+
+    /* Component specific */
+    .prayer-times, 
+    .panchang-details {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .compass-container {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    /* Header adjustments */
+    .header-container {
+        padding: 0.5rem !important;
+    }
+
+    .language-selector {
+        max-width: 120px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .calendar-day {
+        min-height: 40px;
+        font-size: 0.75rem;
+    }
+
+    .weekday-header {
+        font-size: 0.675rem;
+        padding: 0.25rem;
+    }
+
+    .calendar-grid {
+        margin: 0 -0.5rem;
+    }
+
+    .modal-content {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .feature-item {
+        padding: 0.5rem !important;
+    }
+
+    .pricing-section {
+        padding: 1rem !important;
+    }
+}
+
+/* Landscape mode */
+@media (orientation: landscape) and (max-height: 500px) {
+    .calendar-container {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        height: auto;
+        max-height: 90vh;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Safe areas for modern devices */
+@supports (padding: max(0px)) {
+    .app-container {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+        padding-top: max(1rem, env(safe-area-inset-top));
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .modal-content {
+        padding-top: max(1rem, env(safe-area-inset-top));
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+}
+
+/* High contrast and accessibility */
+@media (prefers-contrast: high) {
+    .calendar-day {
+        border: 1px solid #000;
+    }
+
+    .modal-close-button {
+        border: 2px solid #000;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .modal-close-button {
+        background: rgba(0, 0, 0, 0.8) !important;
+        color: #fff !important;
+    }
+
+    .modal-content {
+        background-color: #1a1a1a !important;
+        color: #fff !important;
+    }
+}

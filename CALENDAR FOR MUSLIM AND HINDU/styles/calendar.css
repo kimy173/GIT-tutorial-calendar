@@ -1,0 +1,34 @@
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e2e8f0;
+}
+
+.calendar-day {
+    background-color: white;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f1f5f9;
+}
+
+.calendar-day.today {
+    background-color: #e0f2fe;
+    font-weight: bold;
+}
+
+.calendar-day.festival {
+    color: #dc2626;
+}
+
+.prayer-times {
+    border-left: 4px solid #0ea5e9;
+}
+
+.panchang-details {
+    border-left: 4px solid #f59e0b;
+}

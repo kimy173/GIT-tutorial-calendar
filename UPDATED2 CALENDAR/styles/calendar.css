@@ -1,0 +1,102 @@
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e2e8f0;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.weekday-header {
+    background-color: #f8fafc;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.calendar-day {
+    background-color: white;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    position: relative;
+    min-height: 80px;
+}
+
+.calendar-day.empty {
+    background-color: #f8fafc;
+}
+
+.calendar-day:hover {
+    background-color: #f1f5f9;
+}
+
+.calendar-day.today {
+    background-color: #e0f2fe;
+    font-weight: bold;
+}
+
+/* Hindu festival colors */
+.calendar-day[style*="FF9933"] {
+    border-left: 3px solid #FF9933;
+}
+
+/* Islamic festival colors */
+.calendar-day[style*="006400"] {
+    border-left: 3px solid #006400;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .calendar-day {
+        min-height: 60px;
+        font-size: 0.875rem;
+    }
+
+    .weekday-header {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-day {
+        min-height: 50px;
+        padding: 0.25rem;
+    }
+
+    .calendar-day div {
+        font-size: 0.75rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .calendar-grid {
+        background-color: #1f2937;
+        border-color: #1f2937;
+    }
+
+    .weekday-header {
+        background-color: #111827;
+        color: #e5e7eb;
+        border-color: #374151;
+    }
+
+    .calendar-day {
+        background-color: #1f2937;
+        color: #e5e7eb;
+    }
+
+    .calendar-day.empty {
+        background-color: #111827;
+    }
+
+    .calendar-day:hover {
+        background-color: #374151;
+    }
+
+    .calendar-day.today {
+        background-color: #1e40af;
+    }
+}
