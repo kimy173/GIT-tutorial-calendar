@@ -16,7 +16,7 @@ function Header({ language, onLanguageChange }) {
             </header>
         );
     } catch (error) {
-        console.error('Header component error:', error);
+        console.error('Header cccccccccccomponent error:', error);
         reportError(error);
         return null;
     }
